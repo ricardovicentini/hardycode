@@ -11,18 +11,4 @@ Precisamos construir um algoritmo para saque de dinheiro em caixas eletrônicos,
 
 # Então vamos codar!
 
-*em breve*
-<!-- ```javascript
-const Razorpay = require('razorpay');
-
-let rzp = Razorpay({
-	key_id: 'KEY_ID',
-	secret: 'name'
-});
-
-// capture request
-rzp.capture(payment_id, cost)
-	.then(function (data) {
-		return 2;
-	})
-``` -->
+*em breve...*
