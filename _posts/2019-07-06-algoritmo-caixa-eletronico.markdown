@@ -50,6 +50,11 @@ Precisamos construir um algoritmo para saque de dinheiro em caixas eletrônicos,
 
 **Então, orientado pelo que temos que fazer, podemos codar!** 
 
-\#SOQUENAO hoje :grinning:  
-Continuará...  
-:grinning::grinning::grinning:
+\#SOQUENAO :grinning:  
+
+##### Antes, organize suas idéias
+
+Utilizando o diagrama de sequência da UML (Unified Model Language), podemos ter uma visão mais clara das camadas, classes e métodos que pretendemos construir, conforme imagem abaixo:  
+  
+
+![image-title-here](../../../../assets/diagram de sequencia - sacar.jpg)
