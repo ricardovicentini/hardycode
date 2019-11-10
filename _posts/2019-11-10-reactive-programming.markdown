@@ -68,7 +68,7 @@ Funciona assim, para cada comando dado por um time ou pelo juiz, os participante
     }
 
 
-Da linha 8 a linha 12 estou mapeando as instancias das classes que serão utilizadas via injeção de dependecia utilizando o container padrão do donet core, para utilizar esse container referêcie no nuget:   
+Da linha 8 a linha 12 estou mapeando as instancias das classes que serão utilizadas via injeção de dependecia utilizando o container padrão do donet core, para utilizar esse container referencie no nuget:   
 **Microsoft.Extensions.DependencyInjection;**
 
 Veja na linha 9 que estou passando as regras do jogo: 
