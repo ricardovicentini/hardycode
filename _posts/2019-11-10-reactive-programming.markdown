@@ -105,3 +105,4 @@ O jogo já acabou
 Veja que quando o time marca gol o juiz reage indicando qual time marcou, o time adversário reage pedindo para o pessoal não desanimar e o time que marcou comemora o gol, perceba que os comandos de inicio e de gol partiram do Frontend mas é no Backend que todas as reações acontecem, inclusive, como a regra do jogo é terminar a partir no primeiro gol marcado na sequência o juiz termina a partida e novamente os times reagem ao término da partida, o vencedor comemora, o perdedor expressa ressentimento e os demais comandos do front passam a ser ignorados pois o jogo foi encerrado. 
 
 Então agora vamos conhecer o que acontece no Backend dessa aplicação
+vejá no próxmio artigo
