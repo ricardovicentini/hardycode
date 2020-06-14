@@ -1,0 +1,59 @@
+---
+layout: post
+title:  "Boas práticas no desenvolvimento de software - Comportamentos que todo desenvolvedor deveria ter."
+date:   2020-05-16 12:32:00 -0300
+categories: Arquitetura
+---
+Este artigo é inspirado no livro "Clen Code" de Robert C. Martin.  
+Quando falamos de "Boas práticas" estamos falando de comportamento.  
+Por isso posso acabar tocando em algumas feridas aqui, mas vamos lá!:relaxed:  
+Como desenvolvedores de software devem se comportar diante do código que irá produzir?  
+Podemos afirmar que há duas frentes de trabalho diferentes em que desenvolvedores atuam:
+> Novas soluções ou "Features"  
+ Melhorias ou correções de rotinas  
+
+Uma atenção especial deve ser dada para este segundo item uma vez que o código está em ambiente produtivo o risco de causar falhas ao mexer neste código é muito alto.  
+  
+De forma genérica é esperado que ao longo de sua carreira um desenvolvedor tenha as seguintes competências  
+> Assumir responsabilidade, ***MESMO QUANDO*** não for um problema que você não criou  
+ Demonstrar interesse em evoluir o código que já funciona  
+ Se preocupar se outros desenvolvedores entenderão o seu código ou o código que você der manutenção  
+ Garantir por meio de testes que o que o código produzido se comporta como o esperado  
+ Fazer boa gestão do tempo, conseguir achar um meio termo entre Prazo X Qualidade  
+
+Como deve ser um código bem escrito?  
+--------------------------------------
+
+>
+* o código deve ser auto explicativo;  
+* evite utilizar comentários para explicar o que o código está fazendo 
+* utilize substativos para nomes de Classes
+* escolha bem os nomes dos métodos, use verbos no infinitivo, eles devem indicar o que fazem e só devem fazer uma única coisa (Single Responsability)
+* escolha melhor ainda o nome das variáveis elas devem indicar o que armazenam
+* cuidado com o uso do inglês no código, não misture idiomas e também não traduza termos técnicos e patterns devem ser mantidos com seus nomes originais
+* cuidado com métodos com muitas linhas procure sempre segmentar um método com muitas linhas em submentodos
+* identação, algumas linguagens nem funcionam se o código não estiver identado comrretamente, no caso do c# temos que ter cuidado com a identação correta
+* tratamento de erro centralizado e utilização de logs e traces
+
+SOLID Principles
+================
+Em seu livro "Clen Code", ***uncle Bob*** (é assim que Robert C. Martin é conhecido) apresentou o acronimo SOLID para decorarmos com maior facilidade boas práticas que devemos seguir ao escrever código, abaixo vou tentar explica-las de forma bem sucinta:  
+S -> Single Responsability Principle  (Classes devem sempre possuir uma única responsabilidade)  
+O -> Open Closed Principle (Classes devem ser aberta para extensão e fechada para alteração)  
+L -> Liskov Substitution Principle (Semanticamente deve ser possível subistituir uma super classe por suas classes filhas)  
+I -> Interface Segregation Principle (Interfaces devem ser pequenas e possuir objetivo único)  
+D -> Dependency Inversion Principle (Dependencias devem ser baseadas em abstrações, nunca em classes concretas, isso garante baixo acoplamento)  
+
+Utilização de Design Patterns (Padrões de desenvolvimento de software)
+=============================
+Os primeiros padrões de desenvolvimentos foram descritos por um grupo de 4 pessoas que depois ficaram conhecidos como GOF (Gang Of Four), veja a história 
+no [wikpedia](https://en.wikipedia.org/wiki/Design_Patterns)
+O GOF notou que sistemas de informação muitas vezes tentam resolver problemas diferentes mas com soluções parecidas, por isso foram apresentados no livro ***Design Patterns: Elements of Reusable Object-Oriented Software*** 23 padrões que podem ser aplicados no desenvolvimento de diferentes tipos de software.  
+Esses padrões foram categorizados em 3 tipos diferentes:
+>
+* Criação de objetos (Define a forma apropriada de se criar objetos para diferentes tipos de situações)
+* Struturais (Define como estruturar o código de forma a ser mais fácil sua manutenção e reaproveitamento)
+* Comportamentais (Define como tratar dados para diferentes tipos de situações  )
+
+Não irei abordar os padrões aqui mas fica a dica para conhece-los melhor no [DoFactory](https://www.dofactory.com/net/design-patterns)  
+E uma leitura bem leve e ***hands on*** que indico é esta aqui da [head first](https://www.amazon.com.br/Head-First-Design-Patterns-Brain-Friendly-ebook/dp/B00AA36RZY/ref=asc_df_B00AA36RZY/?tag=googleshopp00-20&linkCode=df0&hvadid=379725685153&hvpos=&hvnetw=g&hvrand=15540416451317687022&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-406130753505&psc=1) vale muito apena!
