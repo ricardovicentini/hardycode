@@ -44,7 +44,7 @@ namespace MyProgram
 ```
 ##### O que faz <span style="color:red">ConfigureAwait(false)</span>? 
 É uma forma simples de indicar que após a execução de um código assíncrono o Runtime do .Net não precisa se preocupar em rodar o resto do código na mesma thread em que o código assíncrono foi executado.  
-Parece meio complicado mas veja no código anterior, na linha 6, estamos fazendo uma chamada para um método assíncrono, o <span style="color:red">AguardarAsync()</span> que está declarado na classe Program, na linha 13. Então o que o ConfigureAwait(false) da linha 6 está dizendo é que quando a chamada assíncrona terminar o Runtime não precisa se preocupar em executar o código da linha 7 na mesma thread em que o código até esse ponto foi executado.  
+Parece meio complicado mas veja no código anterior, na linha 6, estamos fazendo uma chamada para um método assíncrono, o <span style="color:red">AguardarAsync()</span> que está declarado na classe Program, na linha 13. Então o que o ConfigureAwait(false) da linha 6 está dizendo é que quando a chamada assíncrona terminar o Runtime não precisa se preocupar em executar o código da linha 7 na mesma thread em que o código, até esse ponto, foi executado.  
 
 ##### O que ganhamos usando <span style="color:red">ConfigureAwait(false)</span>? 
 Ganhamos um pouco de performance, pois para garantir que o código rode na mesma thread, a thread é armazenada na heap do Runtime. 
@@ -53,8 +53,8 @@ Ganhamos um pouco de performance, pois para garantir que o código rode na mesma
 É possível notar que a heap e a quantidade de alocação de objetos é ligeiramente menor usando o ConfigureAwait  
 
 * Outro ganho é que conseguimos garantir que os consumidores dos métodos assíncronos não ficarão presos em "deadlock" devido a má utilização.  
-No vídeo abaixo você pode ver mais detalhes sobre isso..
-<iframe width="420" height="315" src="http://www.youtube.com/embed/P8NxO0jHDzs" frameborder="0" allowfullscreen></iframe>
+No vídeo abaixo você pode ver mais detalhes sobre isso..  
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/P8NxO0jHDzs/0.jpg)](https://www.youtube.com/watch?v=P8NxO0jHDzs)
 
 ##### Não precisa mais usar <span style="color:red">ConfigureAwait(false)</span> a partir do .Net Core?
 Precisa sim, a utilização dele continua recomendada, muita gente critica sua necessidade e tentam criar soluções alternativas, que em geral não funcionam bem. Mas Sim!!! ConfigureAwait(false) continua sendo extremamente necessário, mesmo na versão ainda em preview do .Net 6  
