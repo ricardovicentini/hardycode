@@ -11,7 +11,7 @@ Os 2 principais questionamentos que sempre escuto são:
 * mas afinal pra que server esse <span style="color:red">ConfigureAwait(false)</span>?
 * ainda precisa disso no .NET Core?  
 
-Bom, antes de tudo eu recomendo fortemente que vc leia meu [artigo anterior](/c%23/2021/04/24/configure-await-faq-translation.html) que é a tradução de uma FAQ sobre ConfigureAwait que um desenvolvedor do time do .Net escreveu há um tempo atrás, mas que ainda vale a pena sua leitura integral.  
+Bom, antes de tudo eu recomendo fortemente que vc leia meu [artigo anterior](/hardycode/c%23/2021/04/24/configure-await-faq-translation.html) que é a tradução de uma FAQ sobre ConfigureAwait que um desenvolvedor do time do .Net escreveu há um tempo atrás, mas que ainda vale a pena sua leitura integral.  
 
 Ok, se você entrou no meu artigo anterior e levou um susto com o tamanho dele, eu não te julgo (rs). De fato tem muita coisa lá, por isso, nesse artigo eu vou tentar dar uma resumida nas questões mais fundamentais.
 
