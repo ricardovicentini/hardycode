@@ -63,4 +63,4 @@ Precisa sim, a utilização dele continua recomendada, muita gente critica sua n
 
 ConfigureAwait(false) é um dispositivo importantíssimo do .NET e merece nossa atenção, conhecer bem seu funcionamento pode ajudar muito a entender problemas de performance e deadlocks em aplicações de qualquer tipo!  
 
-Dúvidas ou sugestões entre em contato, deixe seu comentários!
+Dúvidas ou sugestões entre em contato, deixe seus comentários!
