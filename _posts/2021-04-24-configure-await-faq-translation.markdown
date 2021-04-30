@@ -218,7 +218,7 @@ Mesmo com esses casos especiais, a orientação geral é válida e é um bom pon
 
 Não. Isso garante que não será enfileirado de volta para o contexto original. Mas não significa que o código depois de um <span style="color:red">await task.ConfigureAwait(false)</span> não irá ser executado no contexto original.  Isso porque aguardar uma task "aguardável" já completa, apenas mantém a execução do <span style="color:red">await</span> de forma síncrona em vez de forçar que algo seja enfileirado de volta. Então, se você aguardar uma task que já foi completa no momento que ela está sendo aguardada, independentemente de você ter usado ou não o <span style="color:red">ConfigureAwait(false)</span> o código imediatamente depois disso irá continuar a ser executado na thread atual em qualquer que seja este contexto atual.
 
-### Todo bem usar ConfigureAwait(false) apenas no primeiro await e não no resto?
+### Tudo bem usar ConfigureAwait(false) apenas no primeiro await e não no resto?
 
 Em geral, não. o tópico anterior. Se o <span style="color:red">await task.ConfigureAwait(false)</span> envolve uma task que já está completa no momento que é aguardada (o que é na verdade incrivelmente comum), então o <span style="color:red">ConfigureAwait(false)</span> será sem sentido, conforme a thread continua a executar o código do método depois dele e continua no mesmo contexto que estava anteriormente.
 
